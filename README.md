@@ -1,4 +1,4 @@
-Social Artist Landing Page
+The Social Artist Landing Page-Freelancing Project
 
 Overview
 
@@ -52,17 +52,7 @@ Used CSS animations and JavaScript event listeners for a seamless user experienc
 
 Implemented scroll reveal animations to make elements appear dynamically.
 
-Installation & Usage
 
-Clone the repository:
-
-git clone https://github.com/yourusername/social-artist-landing.git
-
-Navigate to the project folder:
-
-cd social-artist-landing
-
-Open index.html in a browser to view the landing page.
 
 Future Enhancements
 
