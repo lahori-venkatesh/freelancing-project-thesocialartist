@@ -244,11 +244,11 @@ a[href*="calendly"] .text-white {
 
 /* Ensure button text stays white in all states */
 a[href*="calendly"] {
-    color: red !important;
+    color: rgb(153, 6, 6) !important;
 }
 
 a[href*="calendly"] * {
-    color: red !important;
+    color: rgb(153, 6, 6)!important;
 }
 
 /* Navbar active state styling */
