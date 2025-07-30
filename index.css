@@ -228,12 +228,12 @@ nav a:hover {
 /* Book Free Call button styling */
 .gradient-motion,
 a[href*="calendly"] {
-    color: white !important;
+    color: rgb(153, 6, 6) !important;
 }
 
 .gradient-motion:hover,
 a[href*="calendly"]:hover {
-    color: white !important;
+    color: rgb(153, 6, 6) !important;
 }
 
 /* Override any text color classes for the Book Free Call button */
