@@ -1,5 +1,22 @@
+/* 
+  ========================================== THE SOCIAL ARTIST - MAIN JAVASCRIPT ==========================================
+  
+  This JavaScript file contains all the interactive functionality for The Social Artist website including:
+  - Theme toggle functionality (light/dark mode)
+  - Portfolio item management and animations
+  - Mobile menu functionality
+  - Animation and scroll effects
+  - Form handling and validation
+  
+  Author: Lahori Venkatesh
+  Version: 2.0 (Updated with Dark Mode & Enhanced UI)
+  Last Updated: 2025
+*/
+
+/* ========================================== TAILWIND CONFIGURATION ========================================== */
 // Tailwind CSS Configuration
 tailwind.config = {
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
@@ -22,6 +39,7 @@ tailwind.config = {
     }
 };
 
+/* ========================================== PORTFOLIO DATA ========================================== */
 // Portfolio Data
 const portfolioItems = [
     {
@@ -50,6 +68,7 @@ const portfolioItems = [
     }
 ];
 
+/* ========================================== PORTFOLIO FUNCTIONS ========================================== */
 // Portfolio Functions
 function createPortfolioItem(item) {
     return `
@@ -80,6 +99,7 @@ function cloneAndAppendItems() {
     });
 }
 
+/* ========================================== ANIMATION FUNCTIONS ========================================== */
 // Animation Functions
 function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
@@ -94,8 +114,51 @@ function animateValue(obj, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
+/* ========================================== THEME TOGGLE FUNCTIONALITY ========================================== */
+// Theme Toggle Functionality
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const mobileThemeIcon = document.getElementById('mobileThemeIcon');
+    
+    // Check for saved theme preference or default to light theme
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+    updateThemeIcon(currentTheme);
+    
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    }
+    
+    function updateThemeIcon(theme) {
+        const iconClass = theme === 'dark' ? 'ri-moon-line' : 'ri-sun-line';
+        themeIcon.className = iconClass + ' text-xl text-gray-700 dark:text-gray-300';
+        mobileThemeIcon.className = iconClass + ' text-xl text-gray-700 dark:text-gray-300';
+    }
+    
+    // Add event listeners
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+    }
+}
+
+/* ========================================== DOM INITIALIZATION ========================================== */
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize theme toggle
+    initThemeToggle();
+    
     // Initialize portfolio
     loadPortfolioItems();
     
@@ -235,19 +298,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 let answer = '';
                 
                 switch(questionType) {
-                    case 'pricing':
-                        answer = 'Our pricing is project-based and depends on your specific needs. We offer competitive rates starting from ₹15,000 for basic packages. Book a free consultation to get a customized quote!';
-                        break;
-                    case 'timeline':
-                        answer = 'We pride ourselves on speed! Most projects are completed in 2-3 weeks. Social media campaigns can start showing results within the first week.';
-                        break;
-                    case 'services':
-                        answer = 'We offer Branding & Identity, Social Media Management, Performance Marketing, and Content Creation. Each service is tailored to your business goals.';
-                        break;
-                    case 'process':
-                        answer = 'Our 4-step process: Discovery (1-2 days), Strategy (3-5 days), Execution (6-14 days), and Results (ongoing). We keep you updated throughout!';
-                        break;
-                }
+case 'timeline':
+answer = 'We pride ourselves on speed! Most projects are completed in 2-3 weeks. Social media campaigns can start showing results within the first week.';
+break;
+case 'services':
+answer = 'We offer Branding & Identity, Social Media Management, Performance Marketing, and Content Creation. Each service is tailored to your business goals.';
+break;
+case 'process':
+answer = 'Our 4-step process: Discovery (1-2 days), Strategy (3-5 days), Execution (6-14 days), and Results (ongoing). We keep you updated throughout!';
+break;
+}
                 
                 showSupportMessage(answer);
             });

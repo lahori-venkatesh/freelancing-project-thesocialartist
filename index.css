@@ -1,3 +1,47 @@
+/* 
+  ========================================== THE SOCIAL ARTIST - MAIN STYLESHEET ==========================================
+  
+  This stylesheet contains all the styling for The Social Artist website including:
+  - Light/Dark theme variables and transitions
+  - Component-specific styles (buttons, cards, animations)
+  - Responsive design utilities
+  - Custom animations and effects
+  - Dark mode overrides and enhancements
+  
+  Author: Lahori Venkatesh
+  Version: 2.0 (Updated with Dark Mode & Enhanced UI)
+  Last Updated: 2025
+*/
+
+/* ========================================== THEME VARIABLES ========================================== */
+/* CSS Variables for Light/Dark Theme */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --border-color: #e5e7eb;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --border-color: #374151;
+    --nav-bg: rgba(17, 24, 39, 0.95);
+    --card-bg: #1f2937;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Theme transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 :where([class^="ri-"])::before { 
     content: "\f3c2"; 
 }
@@ -50,6 +94,241 @@
 .testimonial-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Dark theme body styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Dark theme navigation styles */
+nav {
+    background-color: var(--nav-bg) !important;
+}
+
+/* Dark theme card styles */
+.service-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+/* Dark theme text styles */
+.dark .text-gray-700 {
+    color: var(--text-secondary);
+}
+
+.dark .text-gray-600 {
+    color: var(--text-secondary);
+}
+
+/* Dark theme background styles */
+.dark .bg-white {
+    background-color: var(--bg-primary);
+}
+
+.dark .bg-gray-50 {
+    background-color: var(--bg-secondary);
+}
+
+/* Dark theme border styles */
+.dark .border-gray-200 {
+    border-color: var(--border-color);
+}
+
+/* Dark theme form and input styles */
+.dark input, .dark textarea, .dark select {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Dark theme button hover states */
+.dark .hover\:bg-gray-100:hover {
+    background-color: var(--bg-secondary);
+}
+
+.dark .hover\:text-primary:hover {
+    color: #dc2626;
+}
+
+/* Dark theme shadow adjustments */
+.dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark theme gradient adjustments */
+.dark .section-gradient {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+/* Dark theme text color overrides */
+.dark .text-gray-800 {
+    color: var(--text-primary);
+}
+
+.dark .text-gray-500 {
+    color: var(--text-secondary);
+}
+
+/* Dark theme background overrides */
+.dark .bg-gray-50 {
+    background-color: var(--bg-secondary);
+}
+
+.dark .bg-gray-100 {
+    background-color: var(--bg-secondary);
+}
+
+/* Portfolio page navbar visibility fixes */
+nav {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+}
+
+.dark nav {
+    background-color: rgba(17, 24, 39, 0.95) !important;
+}
+
+/* Ensure navbar text is visible in both modes */
+nav a {
+    color: #374151 !important;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #dc2626 !important;
+}
+
+.dark nav a {
+    color: #d1d5db !important;
+}
+
+.dark nav a:hover {
+    color: #dc2626 !important;
+}
+
+/* Mobile menu button visibility */
+#mobileMenuBtn {
+    color: #374151 !important;
+}
+
+.dark #mobileMenuBtn {
+    color: #d1d5db !important;
+}
+
+/* Book Free Call button styling */
+.gradient-motion,
+a[href*="calendly"] {
+    color: white !important;
+}
+
+.gradient-motion:hover,
+a[href*="calendly"]:hover {
+    color: white !important;
+}
+
+/* Override any text color classes for the Book Free Call button */
+a[href*="calendly"].text-white,
+a[href*="calendly"] .text-white {
+    color: white !important;
+}
+
+/* Ensure button text stays white in all states */
+a[href*="calendly"] {
+    color: white !important;
+}
+
+a[href*="calendly"] * {
+    color: white !important;
+}
+
+/* Navbar active state styling */
+nav a.text-primary,
+nav a.font-semibold {
+    color: #dc2626 !important;
+}
+
+.dark nav a.text-primary,
+.dark nav a.font-semibold {
+    color: #dc2626 !important;
+}
+
+/* Ensure all primary colored links are red */
+.text-primary {
+    color: #dc2626 !important;
+}
+
+.dark .text-primary {
+    color: #dc2626 !important;
+}
+
+/* Enhanced red stroke effects for dark mode */
+.dark .border-red-300 {
+    border-color: #fca5a5;
+}
+
+.dark .border-red-500 {
+    border-color: #ef4444;
+}
+
+.dark .border-red-700 {
+    border-color: #b91c1c;
+}
+
+/* Dark mode card enhancements */
+.dark .service-card {
+    border: 2px solid #374151;
+    transition: all 0.3s ease;
+}
+
+.dark .service-card:hover {
+    border-color: #dc2626;
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+}
+
+/* Dark mode testimonial card enhancements */
+.dark .testimonial-card {
+    border: 2px solid #374151;
+    transition: all 0.3s ease;
+}
+
+.dark .testimonial-card:hover {
+    border-color: #dc2626;
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+}
+
+/* Testimonial card red stroke styling */
+.testimonial-card, 
+.bg-white.p-8.rounded-xl.shadow-lg.border {
+    border: 2px solid #fecaca !important;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover,
+.bg-white.p-8.rounded-xl.shadow-lg.border:hover {
+    border-color: #fca5a5 !important;
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.1);
+}
+
+.dark .testimonial-card,
+.dark .bg-white.p-8.rounded-xl.shadow-lg.border {
+    border: 2px solid #7f1d1d !important;
+    background-color: #1f2937 !important;
+}
+
+.dark .testimonial-card:hover,
+.dark .bg-white.p-8.rounded-xl.shadow-lg.border:hover {
+    border-color: #dc2626 !important;
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
 }
 
 /* Mobile responsive adjustments */
@@ -171,13 +450,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
-        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 2px, transparent 2px),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 50px 50px, 50px 50px, 25px 25px;
-    background-position: 0 0, 25px 25px, 0 0;
-    animation: textureMove 20s linear infinite;
+    /* Removed dotted texture for cleaner look */
+    background: transparent;
 }
 
 .hero-gradient::after {
@@ -187,11 +461,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.03) 50%, transparent 70%),
-        linear-gradient(-45deg, transparent 30%, rgba(255,255,255,0.03) 50%, transparent 70%);
-    background-size: 100px 100px;
-    animation: textureShift 15s ease-in-out infinite;
+    /* Removed texture shift for cleaner look */
+    background: transparent;
 }
 
 @keyframes textureMove {
@@ -206,4 +477,60 @@
 
 .section-gradient {
     background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+}
+
+/* Testimonial infinite scrolling animation */
+.testimonial-container {
+    height: 600px;
+    overflow: hidden;
+}
+
+.testimonial-column-down {
+    animation: scrollDown 25s linear infinite;
+}
+
+.testimonial-column-up {
+    animation: scrollUp 25s linear infinite;
+}
+
+@keyframes scrollDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes scrollUp {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+.testimonial-column-down:hover,
+.testimonial-column-up:hover {
+    animation-play-state: paused;
+}
+
+/* Client logos infinite scrolling */
+.client-logos-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.client-logos-track {
+    display: inline-flex;
+    animation: scrollHorizontal 20s linear infinite;
+}
+
+@keyframes scrollHorizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.client-logo {
+    flex-shrink: 0;
+    margin: 0 2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.client-logo:hover {
+    opacity: 1;
 }

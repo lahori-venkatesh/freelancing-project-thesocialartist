@@ -1,15 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- 
+  ========================================== THE SOCIAL ARTIST - MAIN WEBSITE ==========================================
+  
+  This is the main website for The Social Artist - a digital marketing agency specializing in:
+  - Branding & Identity Design
+  - Social Media Management  
+  - Performance Marketing
+  - Content Creation
+  
+  Features:
+  - Responsive design with mobile-first approach
+  - Light/Dark theme toggle functionality
+  - Interactive animations and hover effects
+  - SEO optimized with structured data
+  - Fast loading with optimized assets
+  
+  Author: Lahori Venkatesh
+  Version: 2.0 (Updated with Dark Mode & Enhanced UI)
+  Last Updated: 2025
+-->
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>The Social Artist - Digital Marketing Agency | Fast Results, Quality Work</title>
-<meta name="description" content="The Social Artist delivers lightning-fast digital marketing results. Specializing in branding, social media, performance marketing, and content creation. Get results in weeks, not months.">
-<meta name="keywords" content="digital marketing agency, social media marketing, branding, performance marketing, content creation, fast results, Delhi NCR, Faridabad">
-<meta name="author" content="The Social Artist">
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-<meta name="revisit-after" content="7 days">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>The Social Artist - Digital Marketing Agency | Fast Results, Quality Work</title>
+  <meta name="description" content="The Social Artist delivers lightning-fast digital marketing results. Specializing in branding, social media, performance marketing, and content creation. Get results in weeks, not months.">
+  <meta name="keywords" content="digital marketing agency, social media marketing, branding, performance marketing, content creation, fast results, Delhi NCR, Faridabad">
+  <meta name="author" content="The Social Artist">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  </head>
+  
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="The Social Artist - Digital Marketing Agency | Fast Results, Quality Work">
@@ -37,23 +59,38 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <link rel="stylesheet" href="index.css">
 </head>
+
+
+<!-- ========================================== HERO SECTION ========================================== -->
+<!-- 
+  OLD HERO SECTION - COMMENTED OUT
+  This section contained a complex illustration with multiple colored cards and elements.
+  Replaced with a simpler, more visually appealing red-themed illustration.
+-->
+
+<!-- ========================================== NEW HERO SECTION ========================================== -->
 <body class="bg-white">
+<!-- Navigation Bar -->
 <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="flex justify-between items-center h-20">
 <div class="flex-shrink-0 md:flex-none">
 <a href="#" class="block">
-<img src="https://static.readdy.ai/image/45f5a755c5aaf69b77bf8ac7ff2528de/6ffcc063b5d2cb5b4bbf896e8592a7f0.png" alt="The Social Artist Logo" class="h-16 md:h-12 mx-8 md:mx-0">
+<img src="public/logo.png" alt="The Social Artist Logo" class="h-16 md:h-12 mx-8 md:mx-0">
 </a>
 </div>
 <div class="hidden md:flex items-center space-x-8">
 <a href="#" class="text-primary font-semibold">Home</a>
-<a href="#services" class="text-gray-700 hover:text-primary">Services</a>
-<a href="portfolio.html" class="text-gray-700 hover:text-primary">Portfolio</a>
-<a href="#testimonials" class="text-gray-700 hover:text-primary">Testimonials</a>
-<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+<a href="#services" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Services</a>
+<a href="portfolio.html" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Portfolio</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Testimonials</a>
+<a href="#contact" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Contact</a>
+<!-- Theme Toggle Button -->
+<button id="themeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200">
+<i id="themeIcon" class="ri-sun-line text-xl text-gray-700 dark:text-gray-300"></i>
+</button>
 </div>
-<a href="https://calendly.com/thesocialartist/free-consultation" target="_blank" class="!rounded-button gradient-motion text-white px-8 py-3 hover:scale-105 transition-all duration-300 whitespace-nowrap text-lg hidden md:block font-semibold">
+<a href="https://calendly.com/thesocialartistt/30min" target="_blank" class="!rounded-button gradient-motion text-white px-8 py-3 hover:scale-105 transition-all duration-300 whitespace-nowrap text-lg hidden md:block font-semibold">
 Book Free Call
 </a>
 <button class="md:hidden text-gray-600" id="mobileMenuBtn">
@@ -63,32 +100,32 @@ Book Free Call
 <div id="mobileMenu" class="hidden md:hidden">
 <div class="px-4 pt-4 pb-6 space-y-3">
 <a href="#" class="block px-4 py-3 text-primary text-center font-semibold text-lg">Home</a>
-<a href="#services" class="block px-4 py-3 text-gray-700 hover:text-primary text-center text-lg">Services</a>
-<a href="portfolio.html" class="block px-4 py-3 text-gray-700 hover:text-primary text-center text-lg">Portfolio</a>
-<a href="#testimonials" class="block px-4 py-3 text-gray-700 hover:text-primary text-center text-lg">Testimonials</a>
-<a href="#contact" class="block px-4 py-3 text-gray-700 hover:text-primary text-center text-lg">Contact</a>
-<a href="https://calendly.com/thesocialartist/free-consultation" target="_blank" class="!rounded-button gradient-motion text-white px-8 py-4 hover:scale-105 transition-all duration-300 whitespace-nowrap w-full mt-6 text-lg font-semibold">
+<a href="#services" class="block px-4 py-3 text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-center text-lg">Services</a>
+<a href="portfolio.html" class="block px-4 py-3 text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-center text-lg">Portfolio</a>
+<a href="#testimonials" class="block px-4 py-3 text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-center text-lg">Testimonials</a>
+<a href="#contact" class="block px-4 py-3 text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-center text-lg">Contact</a>
+<!-- Mobile Theme Toggle -->
+<button id="mobileThemeToggle" class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
+<i id="mobileThemeIcon" class="ri-sun-line text-xl text-gray-700 dark:text-gray-300"></i>
+<span class="text-gray-700 dark:text-gray-300 font-medium">Toggle Theme</span>
+</button>
+<a href="https://calendly.com/thesocialartistt/30min" target="_blank" class="!rounded-button gradient-motion text-white px-8 py-4 hover:scale-105 transition-all duration-300 whitespace-nowrap w-full mt-6 text-lg font-semibold">
 Book Free Call
 </a>
 </div>
 </div>
 </div>
 </nav>
+
+<!-- Hero Section with New Simple Red Theme Illustration -->
 <header class="pt-16 hero-gradient relative overflow-hidden">
 <div class="absolute inset-0 bg-black/10"></div>
-<!-- Floating geometric shapes for texture -->
-<div class="absolute top-20 left-10 w-20 h-20 bg-white/5 rounded-full blur-xl animate-pulse"></div>
-<div class="absolute top-40 right-20 w-16 h-16 bg-white/5 rounded-full blur-xl animate-pulse" style="animation-delay: 1s;"></div>
-<div class="absolute bottom-20 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
-<div class="absolute top-1/2 right-1/3 w-12 h-12 bg-white/5 rounded-full blur-xl animate-pulse" style="animation-delay: 0.5s;"></div>
-<!-- Diagonal lines texture -->
-<div class="absolute inset-0 opacity-10">
-<div class="absolute top-0 left-0 w-full h-full" style="background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);"></div>
-</div>
+
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24 flex flex-col md:flex-row items-center relative z-10">
+<!-- Left Content -->
 <div class="w-full md:w-1/2 md:pr-12 mb-12 md:mb-0">
 <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">
-Make Your Brand <span class="text-yellow-300">Epic</span> in <span class="text-yellow-300">Weeks</span>
+Make Your Brand <span class="text-yellow-300">Epic</span>  
 </h1>
 <p class="text-base sm:text-lg md:text-2xl text-white/90 mb-6 md:mb-8">
 We deliver lightning-fast digital marketing results that transform your brand and drive measurable growth. Speed is our superpower.
@@ -96,7 +133,7 @@ We deliver lightning-fast digital marketing results that transform your brand an
 <div class="flex items-center gap-6 mb-8 md:mb-10">
 <div class="flex items-center text-white">
 <i class="ri-time-line text-2xl mr-2"></i>
-<span class="font-semibold">Results in 2-3 Weeks</span>
+<span class="font-semibold">Results in 3-4 Weeks</span>
 </div>
 <div class="flex items-center text-white">
 <i class="ri-check-line text-2xl mr-2"></i>
@@ -104,7 +141,7 @@ We deliver lightning-fast digital marketing results that transform your brand an
 </div>
 </div>
 <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-<a href="https://calendly.com/thesocialartist/free-consultation" target="_blank" class="!rounded-button bg-white text-primary px-6 sm:px-10 py-3 sm:py-4 hover:bg-gray-100 transition-all duration-300 whitespace-nowrap text-base sm:text-xl w-full sm:w-auto font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+<a href="https://calendly.com/thesocialartistt/30min" target="_blank" class="!rounded-button bg-white text-primary px-6 sm:px-10 py-3 sm:py-4 hover:bg-gray-100 transition-all duration-300 whitespace-nowrap text-base sm:text-xl w-full sm:w-auto font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
 Start Your Project
 </a>
 <a href="portfolio.html" class="!rounded-button border-2 border-white text-white px-6 sm:px-10 py-3 sm:py-4 hover:bg-white hover:text-primary transition-all duration-300 whitespace-nowrap text-base sm:text-xl w-full sm:w-auto font-semibold">
@@ -112,30 +149,87 @@ View Our Work
 </a>
 </div>
 </div>
+
+<!-- Right Content - New Simple Red Theme Illustration -->
 <div class="w-full md:w-1/2 relative">
 <div class="relative">
-<img src="https://public.readdy.ai/ai/img_res/960b8364c1a8f2cbbc90d9a0a143a0f7.jpg"
-alt="Digital Marketing Agency"
-class="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
-<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+<!-- Simple Red Theme Marketing Illustration -->
+<div class="bg-white/60 dark:bg-gray-900/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-500 relative overflow-hidden border-1 border-red-300 dark:border-red-500">
+<!-- Red Theme Background Pattern -->
+<div class="absolute inset-0 bg-gradient-to-br from-red-50 via-red-100 to-red-200 dark:from-red-900/30 dark:via-red-800/30 dark:to-red-700/30 opacity-60"></div>
+<div class="relative z-10">
+<!-- Main Red Theme Icon -->
+<div class="text-center mb-8">
+<div class="w-28 h-28 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+<i class="ri-rocket-2-line text-white text-4xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-red-800 dark:text-red-300 mb-3">Digital Marketing Excellence</h3>
+<p class="text-red-600 dark:text-red-400 font-medium">Transform your business with our comprehensive solutions</p>
+</div>
+
+<!-- Simple Red Theme Elements -->
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-gradient-to-br from-red-400 to-red-500 rounded-xl p-4 text-white text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+<i class="ri-line-chart-line text-white text-xl"></i>
+</div>
+<h4 class="font-semibold text-sm">Analytics & Growth</h4>
+</div>
+<div class="bg-gradient-to-br from-red-500 to-red-600 rounded-xl p-4 text-white text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+<i class="ri-customer-service-2-line text-white text-xl"></i>
+</div>
+<h4 class="font-semibold text-sm">Customer Success</h4>
+</div>
+</div>
+
+<!-- Red Theme Success Metrics -->
+<div class="bg-gradient-to-r from-red-100 to-red-200 dark:from-red-900/40 dark:to-red-800/40 rounded-xl p-6 border-2 border-red-300 dark:border-red-500">
+<div class="flex justify-between items-center text-center">
+<div>
+<div class="text-3xl font-bold text-red-700 dark:text-red-300">100+</div>
+<div class="text-sm text-red-600 dark:text-red-400 font-medium">Projects</div>
+</div>
+<div>
+<div class="text-3xl font-bold text-red-700 dark:text-red-300">55+</div>
+<div class="text-sm text-red-600 dark:text-red-400 font-medium">Clients</div>
+</div>
+<div>
+<div class="text-3xl font-bold text-red-700 dark:text-red-300">2-3</div>
+<div class="text-sm text-red-600 dark:text-red-400 font-medium">Weeks</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </header>
-<section class="py-24 section-gradient">
+<!-- ========================================== ABOUT SECTION ========================================== -->
+<!-- 
+  About The Social Artist Section
+  Features:
+  - Company introduction and mission
+  - Vision, Values, and Approach cards
+  - Statistics showcase with overlay
+  - Responsive grid layout
+  - Dark mode compatible
+-->
+<section class="py-24 section-gradient dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
 <div class="fade-in-up">
-<h2 class="text-3xl font-bold text-gray-900 mb-6">About The Social Artist</h2>
-<p class="text-lg text-gray-600 mb-8">We are a team of passionate digital marketers, creative minds, and strategic thinkers dedicated to transforming businesses through innovative digital solutions. With years of experience and a data-driven approach, we help brands connect with their audience and achieve measurable results.</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About The Social Artist</h2>
+<p class="text-lg text-gray-600 dark:text-gray-300 mb-8">We are a team of passionate digital marketers, creative minds, and strategic thinkers dedicated to transforming businesses through innovative digital solutions. With years of experience and a data-driven approach, we help brands connect with their audience and achieve measurable results.</p>
 <div class="space-y-6">
 <div class="flex items-start">
 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
 <i class="ri-focus-3-line text-primary text-xl"></i>
 </div>
 <div>
-<h3 class="text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
-<p class="text-gray-600">To be the leading force in digital transformation, helping businesses thrive in the digital age through innovative marketing solutions.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Our Vision</h3>
+<p class="text-gray-600 dark:text-gray-300">To be the leading force in digital transformation, helping businesses thrive in the digital age through innovative marketing solutions.</p>
 </div>
 </div>
 <div class="flex items-start">
@@ -143,8 +237,8 @@ class="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform dur
 <i class="ri-heart-line text-primary text-xl"></i>
 </div>
 <div>
-<h3 class="text-xl font-bold text-gray-900 mb-2">Our Values</h3>
-<p class="text-gray-600">Innovation, integrity, and results-driven approach are at the core of everything we do. We believe in creating lasting partnerships with our clients.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Our Values</h3>
+<p class="text-gray-600 dark:text-gray-300">Innovation, integrity, and results-driven approach are at the core of everything we do. We believe in creating lasting partnerships with our clients.</p>
 </div>
 </div>
 <div class="flex items-start">
@@ -152,27 +246,27 @@ class="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform dur
 <i class="ri-shield-star-line text-primary text-xl"></i>
 </div>
 <div>
-<h3 class="text-xl font-bold text-gray-900 mb-2">Our Approach</h3>
-<p class="text-gray-600">We combine creative excellence with data-driven strategies to deliver exceptional results that exceed client expectations.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Our Approach</h3>
+<p class="text-gray-600 dark:text-gray-300">We combine creative excellence with data-driven strategies to deliver exceptional results that exceed client expectations.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="relative">
 <img src="https://static.readdy.ai/image/45f5a755c5aaf69b77bf8ac7ff2528de/2b46c740576ef663e1d5078413ad498d.png" alt="About Us" class="rounded-lg shadow-xl">
-<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
 <div class="grid grid-cols-3 gap-6">
 <div class="text-center">
 <div class="text-3xl font-bold text-primary mb-2">2+</div>
-<p class="text-gray-600">Years Experience</p>
+<p class="text-gray-600 dark:text-gray-300">Years Experience</p>
 </div>
 <div class="text-center">
 <div class="text-3xl font-bold text-primary mb-2">55+</div>
-<p class="text-gray-600">Happy Clients</p>
+<p class="text-gray-600 dark:text-gray-300">Happy Clients</p>
 </div>
 <div class="text-center">
 <div class="text-3xl font-bold text-primary mb-2">100+</div>
-<p class="text-gray-600">Projects Completed</p>
+<p class="text-gray-600 dark:text-gray-300">Projects Completed</p>
 </div>
 </div>
 </div>
@@ -182,84 +276,95 @@ class="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform dur
 </section>
 
 <!-- Speed Advantage Section -->
-<section class="py-24 bg-white">
+<section class="py-24 bg-white dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Why Speed Matters</h2>
-<p class="text-xl text-gray-600">In today's fast-paced digital world, speed is not just an advantage—it's a necessity</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Why Only The Social Artist</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300">Discover what makes us the preferred choice for digital marketing excellence</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="text-center p-8 rounded-xl bg-gradient-to-br from-red-50 to-red-100 border border-red-200">
+<div class="text-center p-8 rounded-xl bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 border border-red-200 dark:border-red-700">
 <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-<i class="ri-rocket-2-line text-white text-3xl"></i>
+<i class="ri-global-line text-white text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Lightning Fast Delivery</h3>
-<p class="text-gray-600 mb-4">Get your projects completed in 2-3 weeks, not months. We understand that time is money.</p>
-<div class="text-primary font-bold text-lg">2-3 Weeks</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Online & Offline Marketing Campaign</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Comprehensive marketing strategies that cover both digital and traditional channels for maximum reach.</p>
+<div class="text-primary font-bold text-lg">360° Approach</div>
 </div>
-<div class="text-center p-8 rounded-xl bg-gradient-to-br from-red-50 to-red-100 border border-red-200">
+<div class="text-center p-8 rounded-xl bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 border border-red-200 dark:border-red-700">
 <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
 <i class="ri-line-chart-line text-white text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Quick Results</h3>
-<p class="text-gray-600 mb-4">See measurable results within the first week of campaign launch. No waiting, just winning.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Quick Results</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">See measurable results within the first week of campaign launch. No waiting, just winning.</p>
 <div class="text-primary font-bold text-lg">Week 1</div>
 </div>
-<div class="text-center p-8 rounded-xl bg-gradient-to-br from-red-50 to-red-100 border border-red-200">
+<div class="text-center p-8 rounded-xl bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 border border-red-200 dark:border-red-700">
 <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
 <i class="ri-customer-service-2-line text-white text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">24/7 Support</h3>
-<p class="text-gray-600 mb-4">Round-the-clock support and quick response times. We're here when you need us.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">24/7 Support</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Round-the-clock support and quick response times. We're here when you need us.</p>
 <div class="text-primary font-bold text-lg">24/7</div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="services" class="py-24 bg-white">
+<!-- ========================================== SERVICES SECTION ========================================== -->
+<!-- 
+  Our Services Section
+  Features:
+  - 4 main service offerings with icons
+  - Interactive hover effects
+  - Red stroke borders for visual appeal
+  - Call-to-action buttons
+  - Responsive grid layout
+  - Dark mode compatible
+-->
+<section id="services" class="py-24 bg-white dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-<p class="text-xl text-gray-600">Comprehensive digital solutions delivered with speed and precision</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Services</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300">Comprehensive digital solutions delivered with speed and precision</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="service-card bg-white p-8 rounded-xl shadow-lg">
+<div class="service-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-100 dark:border-red-700 hover:border-red-300 dark:hover:border-red-500 transition-all duration-300">
 <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
 <i class="ri-brush-line text-primary text-2xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Branding & Identity</h3>
-<p class="text-gray-600 mb-6">Create a powerful brand identity that resonates with your target audience and sets you apart from competitors.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Branding & Identity</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">Create a powerful brand identity that resonates with your target audience and sets you apart from competitors.</p>
 <button class="!rounded-button text-primary hover:bg-primary/10 px-6 py-3 transition-all duration-300 whitespace-nowrap font-semibold">
 Learn More <i class="ri-arrow-right-line ml-2"></i>
 </button>
 </div>
-<div class="service-card bg-white p-8 rounded-xl shadow-lg">
+<div class="service-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-100 dark:border-red-700 hover:border-red-300 dark:hover:border-red-500 transition-all duration-300">
 <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
 <i class="ri-chat-3-line text-primary text-2xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Social Media Management</h3>
-<p class="text-gray-600 mb-6">Strategic social media campaigns that engage your audience and drive meaningful conversations.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Social Media Management</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">Strategic social media campaigns that engage your audience and drive meaningful conversations.</p>
 <button class="!rounded-button text-primary hover:bg-primary/10 px-6 py-3 transition-all duration-300 whitespace-nowrap font-semibold">
 Learn More <i class="ri-arrow-right-line ml-2"></i>
 </button>
 </div>
-<div class="service-card bg-white p-8 rounded-xl shadow-lg">
+<div class="service-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-100 dark:border-red-700 hover:border-red-300 dark:hover:border-red-500 transition-all duration-300">
 <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
 <i class="ri-line-chart-line text-primary text-2xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Performance Marketing</h3>
-<p class="text-gray-600 mb-6">Data-driven marketing strategies that maximize ROI and drive business growth.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Performance Marketing</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">Data-driven marketing strategies that maximize ROI and drive business growth.</p>
 <button class="!rounded-button text-primary hover:bg-primary/10 px-6 py-3 transition-all duration-300 whitespace-nowrap font-semibold">
 Learn More <i class="ri-arrow-right-line ml-2"></i>
 </button>
 </div>
-<div class="service-card bg-white p-8 rounded-xl shadow-lg">
+<div class="service-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-100 dark:border-red-700 hover:border-red-300 dark:hover:border-red-500 transition-all duration-300">
 <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
 <i class="ri-movie-line text-primary text-2xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Content Creation</h3>
-<p class="text-gray-600 mb-6">Compelling content that tells your brand story and connects with your audience.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Content Creation</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">Compelling content that tells your brand story and connects with your audience.</p>
 <button class="!rounded-button text-primary hover:bg-primary/10 px-6 py-3 transition-all duration-300 whitespace-nowrap font-semibold">
 Learn More <i class="ri-arrow-right-line ml-2"></i>
 </button>
@@ -268,55 +373,75 @@ Learn More <i class="ri-arrow-right-line ml-2"></i>
 </div>
 </section>
 
-<!-- Methodology Section -->
-<section class="py-24 bg-white">
+<!-- ========================================== METHODOLOGY SECTION ========================================== -->
+<!-- 
+  Our Speed-First Methodology Section
+  Features:
+  - 4-step process explanation
+  - Timeline indicators (Day 1-2, Day 3-5, etc.)
+  - Icon-based visual representation
+  - Responsive grid layout
+  - Dark mode compatible
+-->
+<section class="py-24 bg-white dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Speed-First Methodology</h2>
-<p class="text-xl text-gray-600">How we deliver exceptional results in record time</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Speed-First Methodology</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300">How we deliver exceptional results in record time</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 <div class="text-center">
 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
 <i class="ri-search-line text-primary text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Quick Discovery</h3>
-<p class="text-gray-600">Rapid analysis of your business, competitors, and market opportunities</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Quick Discovery</h3>
+<p class="text-gray-600 dark:text-gray-300">Rapid analysis of your business, competitors, and market opportunities</p>
 <div class="text-primary font-bold text-sm mt-4">Day 1-2</div>
 </div>
 <div class="text-center">
 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
 <i class="ri-lightbulb-line text-primary text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Strategic Planning</h3>
-<p class="text-gray-600">Data-driven strategy development with clear objectives and KPIs</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Strategic Planning</h3>
+<p class="text-gray-600 dark:text-gray-300">Data-driven strategy development with clear objectives and KPIs</p>
 <div class="text-primary font-bold text-sm mt-4">Day 3-5</div>
 </div>
 <div class="text-center">
 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
 <i class="ri-rocket-line text-primary text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Rapid Execution</h3>
-<p class="text-gray-600">Swift implementation with continuous optimization and real-time monitoring</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Rapid Execution</h3>
+<p class="text-gray-600 dark:text-gray-300">Swift implementation with continuous optimization and real-time monitoring</p>
 <div class="text-primary font-bold text-sm mt-4">Day 6-14</div>
 </div>
 <div class="text-center">
 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
 <i class="ri-line-chart-line text-primary text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-4">Measurable Results</h3>
-<p class="text-gray-600">Immediate outcomes and ongoing support for sustained growth</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Measurable Results</h3>
+<p class="text-gray-600 dark:text-gray-300">Immediate outcomes and ongoing support for sustained growth</p>
 <div class="text-primary font-bold text-sm mt-4">Ongoing</div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="portfolio" class="py-24 section-gradient">
+<!-- ========================================== PORTFOLIO SECTION ========================================== -->
+<!-- 
+  Our Portfolio Section
+  Features:
+  - Showcase of best work and success stories
+  - Interactive project cards with hover effects
+  - Category-based filtering
+  - Call-to-action to view all projects
+  - Responsive grid layout
+  - Dark mode compatible
+-->
+<section id="portfolio" class="py-24 section-gradient dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Portfolio</h2>
-<p class="text-xl text-gray-600">Showcasing our best work and success stories</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Portfolio</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300">Showcasing our best work and success stories</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
 <div class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl">
@@ -370,62 +495,211 @@ View All Projects
 
 </div>
 </section>
-<section class="py-24 bg-white">
+<!-- ========================================== INDUSTRIES SECTION ========================================== -->
+<!-- 
+  Industries We Serve Section
+  Features:
+  - 6 industry categories with icons
+  - Interactive hover effects with red strokes
+  - Responsive grid layout
+  - Dark mode compatible
+  - Visual representation of diverse client base
+-->
+<section class="py-24 bg-white dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-<p class="text-xl text-gray-600">Trusted by leading companies across diverse sectors</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Industries We Serve</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300">Trusted by leading companies across diverse sectors</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-<div class="bg-white p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-primary/20">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-red-200 dark:border-red-600 hover:border-red-400 dark:hover:border-red-500">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
 <i class="ri-bank-line text-primary text-2xl"></i>
 </div>
-<h3 class="font-bold text-gray-900">Finance</h3>
+<h3 class="font-bold text-gray-900 dark:text-white">Finance</h3>
 </div>
-<div class="bg-white p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-primary/20">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-red-200 dark:border-red-600 hover:border-red-400 dark:hover:border-red-500">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
 <i class="ri-graduation-cap-line text-primary text-2xl"></i>
 </div>
-<h3 class="font-bold text-gray-900">Education</h3>
+<h3 class="font-bold text-gray-900 dark:text-white">Education</h3>
 </div>
-<div class="bg-white p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-primary/20">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-red-200 dark:border-red-600 hover:border-red-400 dark:hover:border-red-500">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
 <i class="ri-home-4-line text-primary text-2xl"></i>
 </div>
-<h3 class="font-bold text-gray-900">Real Estate</h3>
+<h3 class="font-bold text-gray-900 dark:text-white">Real Estate</h3>
 </div>
-<div class="bg-white p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-primary/20">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-red-200 dark:border-red-600 hover:border-red-400 dark:hover:border-red-500">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
 <i class="ri-heart-pulse-line text-primary text-2xl"></i>
 </div>
-<h3 class="font-bold text-gray-900">Healthcare</h3>
+<h3 class="font-bold text-gray-900 dark:text-white">Healthcare</h3>
 </div>
-<div class="bg-white p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-primary/20">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-red-200 dark:border-red-600 hover:border-red-400 dark:hover:border-red-500">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
 <i class="ri-movie-2-line text-primary text-2xl"></i>
 </div>
-<h3 class="font-bold text-gray-900">Media</h3>
+<h3 class="font-bold text-gray-900 dark:text-white">Media</h3>
 </div>
-<div class="bg-white p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-primary/20">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-red-200 dark:border-red-600 hover:border-red-400 dark:hover:border-red-500">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
 <i class="ri-gamepad-line text-primary text-2xl"></i>
 </div>
-<h3 class="font-bold text-gray-900">Entertainment</h3>
+<h3 class="font-bold text-gray-900 dark:text-white">Entertainment</h3>
 </div>
 </div>
 </div>
 </section>
-<section id="testimonials" class="py-24 bg-white">
+
+<!-- ========================================== CLIENTS SECTION ========================================== -->
+<!-- 
+  Our Trusted Clients Section
+  Features:
+  - Infinite scrolling client logos
+  - Gradient overlay effects
+  - Responsive design
+  - Dark mode compatible
+  - Smooth animation effects
+-->
+<section class="py-24 bg-white dark:bg-gray-900">
+  <style>
+    @keyframes infinite-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .client-logos-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .client-logos-track {
+      display: flex;
+      width: max-content;
+      animation: infinite-scroll 35s linear infinite;
+    }
+    .client-logo-img {
+      width: 80px;
+      height: 80px;
+      margin: 0 24px 16px 24px;
+      border-radius: 9999px;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      border: 1px solid #e5e7eb;
+      padding: 8px;
+      display: inline-block;
+    }
+    .dark .client-logo-img {
+      background: #1f2937;
+      border: 1px solid #374151;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    /* Responsive adjustments */
+    @media(max-width: 600px) {
+      .client-logo-img {
+        width: 52px;
+        height: 52px;
+        margin: 0 10px 8px 10px;
+      }
+    }
+    /* Gradient overlay effect on both sides */
+    .client-logos-container::before,
+    .client-logos-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100px;    /* Adjust for wider/narrower fade */
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .client-logos-container::before {
+      left: 0;
+      background: linear-gradient(to right, white 0%, transparent 100%);
+    }
+    .client-logos-container::after {
+      right: 0;
+      background: linear-gradient(to left, white 0%, transparent 100%);
+    }
+    .dark .client-logos-container::before {
+      background: linear-gradient(to right, #111827 0%, transparent 100%);
+    }
+    .dark .client-logos-container::after {
+      background: linear-gradient(to left, #111827 0%, transparent 100%);
+    }
+  </style>
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Trusted Clients</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300">Leading brands that trust us with their digital success</p>
+    </div>
+    <div class="client-logos-container">
+      <div class="client-logos-track">
+        <!-- Major Brands -->
+        <img src="public/delhicafe.png" alt="Microsoft" class="client-logo-img" loading="lazy" />
+        <img src="public/imperfecto.png" alt="Coca-Cola" class="client-logo-img" loading="lazy" />
+        <img src="public/karigari.png" alt="Starbucks" class="client-logo-img" loading="lazy" />
+        <img src="public/molecule.png" alt="Nike" class="client-logo-img" loading="lazy" />
+        <img src="public/pind balluchi.png" alt="McDonald's" class="client-logo-img" loading="lazy" />
+        <img src="public/pirates.png" alt="Apple" class="client-logo-img" loading="lazy" />
+        <img src="public/pureorigin.png" alt="Disney" class="client-logo-img" loading="lazy" />
+        <img src="public/wowmomo.png" alt="Amazon" class="client-logo-img" loading="lazy" />
+        <img src="public/delhicafe.png" alt="Google" class="client-logo-img" loading="lazy" />
+        <img src="public/giva.png" alt="Tesla" class="client-logo-img" loading="lazy" />
+        <!-- Local Startups: update src with real logo paths -->
+        <img src="/public/delhicafe.png" alt="Startup Innovators" class="client-logo-img" loading="lazy" />
+        <img src="/public/giva.png" alt="Greenify Tech" class="client-logo-img" loading="lazy" />
+        <!-- Repeat sequence for infinite loop -->
+        <img src="public/delhicafe.png" alt="Microsoft" class="client-logo-img" loading="lazy" />
+        <img src="public/imperfecto.png" alt="Coca-Cola" class="client-logo-img" loading="lazy" />
+        <img src="public/karigari.png" alt="Starbucks" class="client-logo-img" loading="lazy" />
+        <img src="public/molecule.png" alt="Nike" class="client-logo-img" loading="lazy" />
+        <img src="public/pind balluchi.png" alt="McDonald's" class="client-logo-img" loading="lazy" />
+        <img src="public/pirates.png" alt="Apple" class="client-logo-img" loading="lazy" />
+        <img src="public/pureorigin.png" alt="Disney" class="client-logo-img" loading="lazy" />
+        <img src="public/wowmomo.png" alt="Amazon" class="client-logo-img" loading="lazy" />
+        <img src="public/delhicafe.png" alt="Google" class="client-logo-img" loading="lazy" />
+        <img src="public/giva.png" alt="Tesla" class="client-logo-img" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ========================================== TESTIMONIALS SECTION ========================================== -->
+<!-- 
+  Client Testimonials Section
+  Features:
+  - Infinite scrolling testimonials
+  - Multiple columns for visual appeal
+  - Client information with avatars
+  - Red stroke borders for visual appeal
+  - Dark mode compatible
+  - Smooth animation effects
+-->
+<section id="testimonials" class="py-24 bg-white dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
-<p class="text-xl text-gray-600">What our clients say about working with us</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Client Testimonials</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300">What our clients say about working with us</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="testimonial-container overflow-hidden relative">
+<!-- Top gradient overlay -->
+<div class="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white dark:from-gray-900 to-transparent z-10"></div>
+<!-- Bottom gradient overlay -->
+<div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white dark:from-gray-900 to-transparent z-10"></div>
+
+<!-- Column Layout -->
+<div class="grid grid-cols-3 gap-6">
+<!-- Column 1 - Moving Up -->
+<div class="testimonial-column-up flex flex-col space-y-6">
+<!-- Original Testimonials -->
 <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
 <div class="text-primary text-4xl mb-6">"</div>
-<p class="text-gray-600 mb-6">The Social Artist has completely transformed our online presence! Their strategic social media campaigns and engaging content have brought in more customers than ever. Their team understands the food industry and knows exactly how to showcase our authentic flavors. Highly recommended!</p>
+<p class="text-gray-600 mb-6">The Social Artist has completely transformed our online presence! Their strategic social media campaigns and engaging content have brought in more customers than ever.</p>
 <div class="flex items-center">
 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
 <i class="ri-user-3-line text-primary text-xl"></i>
@@ -438,7 +712,78 @@ View All Projects
 </div>
 <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
 <div class="text-primary text-4xl mb-6">"</div>
-<p class="text-gray-600 mb-6">A big shoutout to The Social Artist for their exceptional digital marketing services! Their creativity, targeted ads, and social media strategies have significantly boosted our restaurant's visibility and footfall. We couldn't have asked for a better agency!</p>
+<p class="text-gray-600 mb-6">Outstanding results! The Social Artist delivered beyond our expectations. Their performance marketing strategies have increased our ROI significantly.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Priya Sharma</h4>
+<p class="text-gray-600">Fashion Boutique</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">Fast, efficient, and results-driven! The Social Artist delivered our project on time with outstanding quality. Great communication throughout.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Rajesh Kumar</h4>
+<p class="text-gray-600">Real Estate</p>
+</div>
+</div>
+</div>
+<!-- Duplicate Testimonials for Seamless Loop -->
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">The Social Artist has completely transformed our online presence! Their strategic social media campaigns and engaging content have brought in more customers than ever.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Rohit Arora</h4>
+<p class="text-gray-600">Khatir - The Family Dhaba</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">Outstanding results! The Social Artist delivered beyond our expectations. Their performance marketing strategies have increased our ROI significantly.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Priya Sharma</h4>
+<p class="text-gray-600">Fashion Boutique</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">Fast, efficient, and results-driven! The Social Artist delivered our project on time with outstanding quality. Great communication throughout.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Rajesh Kumar</h4>
+<p class="text-gray-600">Real Estate</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Column 2 - Moving Down -->
+<div class="testimonial-column-down flex flex-col space-y-6">
+<!-- Original Testimonials -->
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">A big shoutout to The Social Artist for their exceptional digital marketing services! Their creativity and targeted ads have significantly boosted our visibility.</p>
 <div class="flex items-center">
 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
 <i class="ri-user-3-line text-primary text-xl"></i>
@@ -451,7 +796,78 @@ View All Projects
 </div>
 <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
 <div class="text-primary text-4xl mb-6">"</div>
-<p class="text-gray-600 mb-6">The Social Artist is hands down the best marketing agency we've worked with! Their branding, social media management, and ad strategies have helped TCD Bakers attract more customers and grow our brand. If you're looking for results, they're the team to trust!</p>
+<p class="text-gray-600 mb-6">Professional team with creative solutions! They understand our business needs and deliver results that matter. Highly recommended!</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Amit Patel</h4>
+<p class="text-gray-600">Tech Startup</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">Amazing work! The Social Artist helped us establish a strong online presence and increase our customer base significantly.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Suman Verma</h4>
+<p class="text-gray-600">Healthcare Clinic</p>
+</div>
+</div>
+</div>
+<!-- Duplicate Testimonials for Seamless Loop -->
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">A big shoutout to The Social Artist for their exceptional digital marketing services! Their creativity and targeted ads have significantly boosted our visibility.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Rakesh Kaushik</h4>
+<p class="text-gray-600">El Nido Restro Bar</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">Professional team with creative solutions! They understand our business needs and deliver results that matter. Highly recommended!</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Amit Patel</h4>
+<p class="text-gray-600">Tech Startup</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">Amazing work! The Social Artist helped us establish a strong online presence and increase our customer base significantly.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Suman Verma</h4>
+<p class="text-gray-600">Healthcare Clinic</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Column 3 - Moving Up -->
+<div class="testimonial-column-up flex flex-col space-y-6">
+<!-- Original Testimonials -->
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">The Social Artist is hands down the best marketing agency we've worked with! Their branding and social media management have helped us grow our brand.</p>
 <div class="flex items-center">
 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
 <i class="ri-user-3-line text-primary text-xl"></i>
@@ -462,23 +878,102 @@ View All Projects
 </div>
 </div>
 </div>
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 mb-6">The Social Artist transformed our brand identity completely. Their creative approach and attention to detail is exceptional.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">Neha Singh</h4>
+<p class="text-gray-600">Beauty Salon</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 dark:text-gray-300 mb-6">Best investment for our business! The Social Artist's marketing strategies have given us a competitive edge in the market.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Vikram Malhotra</h4>
+<p class="text-gray-600 dark:text-gray-300">E-commerce Store</p>
+</div>
+</div>
+</div>
+<!-- Duplicate Testimonials for Seamless Loop -->
+<div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 dark:text-gray-300 mb-6">The Social Artist is hands down the best marketing agency we've worked with! Their branding and social media management have helped us grow our brand.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Deepak</h4>
+<p class="text-gray-600 dark:text-gray-300">TCD Bakers</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 dark:text-gray-300 mb-6">The Social Artist transformed our brand identity completely. Their creative approach and attention to detail is exceptional.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Neha Singh</h4>
+<p class="text-gray-600 dark:text-gray-300">Beauty Salon</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:border-primary/20 transition-all duration-300">
+<div class="text-primary text-4xl mb-6">"</div>
+<p class="text-gray-600 dark:text-gray-300 mb-6">Best investment for our business! The Social Artist's marketing strategies have given us a competitive edge in the market.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-3-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Vikram Malhotra</h4>
+<p class="text-gray-600 dark:text-gray-300">E-commerce Store</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
-<section id="contact" class="py-24 section-gradient">
+<!-- ========================================== CONTACT SECTION ========================================== -->
+<!-- 
+  Contact Section
+  Features:
+  - Contact information with icons
+  - Call-to-action messaging
+  - Contact form integration
+  - Responsive layout
+  - Dark mode compatible
+-->
+<section id="contact" class="py-24 section-gradient dark:bg-gray-900">
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 <div>
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Let's Create Something Amazing Together</h2>
-<p class="text-xl text-gray-600 mb-8">Ready to transform your digital presence? Get in touch with us today.</p>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Let's Create Something Amazing Together</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">Ready to transform your digital presence? Get in touch with us today.</p>
 <div class="space-y-6">
 <div class="flex items-center">
 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
 <i class="ri-global-line text-primary text-xl"></i>
 </div>
 <div>
-<h4 class="font-bold text-gray-900">Website</h4>
-<p class="text-gray-600">www.thesocialartist.in</p>
+<h4 class="font-bold text-gray-900 dark:text-white">Website</h4>
+<p class="text-gray-600 dark:text-gray-300">www.thesocialartist.in</p>
 </div>
 </div>
 <div class="flex items-center">
@@ -486,8 +981,8 @@ View All Projects
 <i class="ri-mail-line text-primary text-xl"></i>
 </div>
 <div>
-<h4 class="font-bold text-gray-900">Email Us</h4>
-<p class="text-gray-600">hello@thesocialartist.in</p>
+<h4 class="font-bold text-gray-900 dark:text-white">Email Us</h4>
+<p class="text-gray-600 dark:text-gray-300">hello@thesocialartist.in</p>
 </div>
 </div>
 <div class="flex items-center">
@@ -495,8 +990,8 @@ View All Projects
 <i class="ri-phone-line text-primary text-xl"></i>
 </div>
 <div>
-<h4 class="font-bold text-gray-900">Call Us</h4>
-<p class="text-gray-600">+91 8506044943</p>
+<h4 class="font-bold text-gray-900 dark:text-white">Call Us</h4>
+<p class="text-gray-600 dark:text-gray-300">+91 8447378826</p>
 </div>
 </div>
 <div class="flex items-center">
@@ -536,7 +1031,7 @@ Send Message
 <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
 <div>
-<img src="https://static.readdy.ai/image/45f5a755c5aaf69b77bf8ac7ff2528de/6ffcc063b5d2cb5b4bbf896e8592a7f0.png" alt="The Social Artist Logo" class="h-8 mb-6">
+<img src="public/logo.png" alt="The Social Artist Logo" class="h-8 mb-6">
 <p class="text-gray-400">Transforming brands through innovative digital marketing strategies.</p>
 </div>
 <div>
@@ -566,7 +1061,7 @@ Send Message
 <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
 <i class="ri-twitter-fill text-white"></i>
 </a>
-<a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+<a href="https://linkedin.com/company/the-social-artist/" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
 <i class="ri-linkedin-fill text-white"></i>
 </a>
 <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -598,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-<!-- Support/Help Desk Widget -->
+<!-- Support/Help Desk Widget ---------------------------------------->
 <div id="supportWidget" class="fixed bottom-6 right-6 z-50">
     <!-- Support Button -->
     <button id="supportBtn" class="w-16 h-16 bg-primary rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white hover:scale-110">
@@ -619,30 +1114,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <h4 class="font-semibold text-gray-900 mb-2">Quick Questions</h4>
                     <div class="space-y-2">
-                        <button class="support-question text-left w-full text-sm text-gray-600 hover:text-primary transition-colors" data-question="pricing">
-                            💰 What are your pricing plans?
-                        </button>
-                        <button class="support-question text-left w-full text-sm text-gray-600 hover:text-primary transition-colors" data-question="timeline">
-                            ⏱️ How fast can you deliver results?
-                        </button>
-                        <button class="support-question text-left w-full text-sm text-gray-600 hover:text-primary transition-colors" data-question="services">
-                            🎯 What services do you offer?
-                        </button>
-                        <button class="support-question text-left w-full text-sm text-gray-600 hover:text-primary transition-colors" data-question="process">
-                            📋 What's your working process?
-                        </button>
-                    </div>
+<button class="support-question text-left w-full text-sm text-gray-600 hover:text-primary transition-colors" data-question="timeline">
+⏱️ How fast can you deliver results?
+</button>
+<button class="support-question text-left w-full text-sm text-gray-600 hover:text-primary transition-colors" data-question="services">
+🎯 What services do you offer?
+</button>
+<button class="support-question text-left w-full text-sm text-gray-600 hover:text-primary transition-colors" data-question="process">
+📋 What's your working process?
+</button>
+</div>
                 </div>
                 
                 <div class="bg-primary/5 p-4 rounded-lg">
                     <h4 class="font-semibold text-primary mb-2">Get in Touch</h4>
                     <div class="space-y-2">
-                        <a href="https://calendly.com/thesocialartist/free-consultation" target="_blank" class="block text-sm text-primary hover:text-primary/80 transition-colors">
-                            📅 Book Free Consultation
-                        </a>
-                        <a href="tel:+918506044943" class="block text-sm text-primary hover:text-primary/80 transition-colors">
-                            📞 Call Us: +91 8506044943
-                        </a>
+                        <a href="https://calendly.com/thesocialartistt/30min" target="_blank" class="block text-sm text-primary hover:text-primary/80 transition-colors">
+📅 Book Free Consultation
+</a>
+                        <a href="tel:+918447378826" class="block text-sm text-primary hover:text-primary/80 transition-colors">
+📞 Call Us: +91 8447378826
+</a>
                         <a href="mailto:hello@thesocialartist.in" class="block text-sm text-primary hover:text-primary/80 transition-colors">
                             ✉️ Email: hello@thesocialartist.in
                         </a>
@@ -670,7 +1162,7 @@ document.addEventListener('DOMContentLoaded', function() {
   "@type": "Organization",
   "name": "The Social Artist",
   "url": "https://thesocialartist.in",
-  "logo": "https://static.readdy.ai/image/45f5a755c5aaf69b77bf8ac7ff2528de/6ffcc063b5d2cb5b4bbf896e8592a7f0.png",
+  "logo": "public/logo.png",
   "description": "Digital marketing agency delivering lightning-fast results in branding, social media, performance marketing, and content creation.",
   "address": {
     "@type": "PostalAddress",
@@ -681,16 +1173,16 @@ document.addEventListener('DOMContentLoaded', function() {
     "addressCountry": "IN"
   },
   "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-8506044943",
-    "contactType": "customer service",
-    "email": "hello@thesocialartist.in"
-  },
+"@type": "ContactPoint",
+"telephone": "+91-8447378826",
+"contactType": "customer service",
+"email": "hello@thesocialartist.in"
+},
   "sameAs": [
-    "https://facebook.com/thesocialartist",
-    "https://twitter.com/thesocialartist",
-    "https://linkedin.com/company/thesocialartist",
-    "https://instagram.com/thesocialartist"
+    "https://facebook.com/the-social-artist",
+    "https://twitter.com/the-social-artist",
+    "https://linkedin.com/company/the-social-artist/",
+    "https://instagram.com/the-social-artist"
   ],
   "serviceArea": {
     "@type": "GeoCircle",
@@ -748,7 +1240,7 @@ document.addEventListener('DOMContentLoaded', function() {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "The Social Artist",
-  "image": "https://static.readdy.ai/image/45f5a755c5aaf69b77bf8ac7ff2528de/6ffcc063b5d2cb5b4bbf896e8592a7f0.png",
+  "image": "public/logo.png",
   "description": "Digital marketing agency in Faridabad, Haryana specializing in fast, results-driven marketing solutions.",
   "priceRange": "₹₹",
   "address": {
@@ -765,7 +1257,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "longitude": 77.3178
   },
   "url": "https://thesocialartist.in",
-  "telephone": "+91-8506044943",
+  "telephone": "+91-8447378826",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [

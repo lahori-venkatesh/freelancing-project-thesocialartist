@@ -174,33 +174,165 @@ const portfolioItems = [
         client: "Online Store",
         duration: "2 Weeks",
         description: "Advanced retargeting campaigns with dynamic ads and personalized messaging"
+    },
+    
+    // Influencer Marketing Projects with Reels (1080x1920 Portrait)
+    {
+        id: 17,
+        type: "reel",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        title: "Fashion Influencer Campaign",
+        category: "influencer",
+        client: "Fashion Brand",
+        duration: "2 Weeks",
+        description: "Collaboration with top fashion influencers for brand awareness and sales"
+    },
+    {
+        id: 18,
+        type: "reel",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        title: "Food & Lifestyle Reels",
+        category: "influencer",
+        client: "Restaurant Chain",
+        duration: "1 Week",
+        description: "Engaging food reels with lifestyle influencers driving foot traffic"
+    },
+    {
+        id: 19,
+        type: "reel",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        title: "Beauty Product Launch",
+        category: "influencer",
+        client: "Beauty Brand",
+        duration: "3 Weeks",
+        description: "Multi-platform influencer campaign for new product launch"
+    },
+    {
+        id: 20,
+        type: "reel",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        title: "Tech Gadget Reviews",
+        category: "influencer",
+        client: "Tech Company",
+        duration: "2 Weeks",
+        description: "Tech influencer reviews and demonstrations for product credibility"
+    },
+    {
+        id: 21,
+        type: "reel",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+        title: "Travel Influencer Partnership",
+        category: "influencer",
+        client: "Travel Agency",
+        duration: "2 Weeks",
+        description: "Travel influencer showcasing destinations and experiences"
+    },
+    {
+        id: 22,
+        type: "reel",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+        title: "Fitness Influencer Campaign",
+        category: "influencer",
+        client: "Fitness Brand",
+        duration: "1 Week",
+        description: "Fitness influencer promoting workout routines and products"
     }
 ];
 
 // Portfolio Functions
 function createPortfolioItem(item) {
-    return `
-        <div class="portfolio-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl" data-category="${item.category}">
-            <img src="${item.image}"
-                 alt="${item.title}"
-                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 class="text-xl font-bold mb-2">${item.title}</h3>
-                    <p class="text-sm text-gray-300 mb-3">${item.client}</p>
-                    <p class="text-sm mb-4">${item.description}</p>
-                    <div class="flex items-center justify-between">
-                        <span class="bg-primary/20 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            ${item.duration}
-                        </span>
-                        <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold capitalize">
-                            ${item.category}
-                        </span>
+    if (item.type === "reel") {
+        return `
+            <div class="portfolio-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl" data-category="${item.category}">
+                <video 
+                    src="${item.video}"
+                    class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    preload="metadata"
+                    style="aspect-ratio: 9/16; max-width: 1080px; max-height: 1920px;">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">${item.title}</h3>
+                        <p class="text-sm text-gray-300 mb-3">${item.client}</p>
+                        <p class="text-sm mb-4">${item.description}</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-primary/20 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                ${item.duration}
+                            </span>
+                            <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold capitalize">
+                                ${item.category}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded-full text-xs">
+                    <i class="ri-play-circle-line mr-1"></i>Reel
+                </div>
+                <div class="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 rounded-full text-xs">
+                    <i class="ri-time-line mr-1"></i>5s
+                </div>
+            </div>
+        `;
+    } else if (item.type === "video") {
+        return `
+            <div class="portfolio-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl" data-category="${item.category}">
+                <video 
+                    src="${item.video}"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    preload="metadata">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">${item.title}</h3>
+                        <p class="text-sm text-gray-300 mb-3">${item.client}</p>
+                        <p class="text-sm mb-4">${item.description}</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-primary/20 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                ${item.duration}
+                            </span>
+                            <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold capitalize">
+                                ${item.category}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded-full text-xs">
+                    <i class="ri-play-circle-line mr-1"></i>Video
+                </div>
+            </div>
+        `;
+    } else {
+        return `
+            <div class="portfolio-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl" data-category="${item.category}">
+                <img src="${item.image}"
+                     alt="${item.title}"
+                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">${item.title}</h3>
+                        <p class="text-sm text-gray-300 mb-3">${item.client}</p>
+                        <p class="text-sm mb-4">${item.description}</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-primary/20 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                ${item.duration}
+                            </span>
+                            <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold capitalize">
+                                ${item.category}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
+    }
 }
 
 function loadPortfolioItems(filter = 'all') {
@@ -223,6 +355,13 @@ function loadPortfolioItems(filter = 'all') {
             </div>
         `;
         return;
+    }
+    
+    // Special layout for influencer marketing (portrait reels)
+    if (filter === 'influencer') {
+        container.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
+    } else {
+        container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
     }
     
     filteredItems.forEach(item => {
@@ -361,6 +500,34 @@ style.textContent = `
     .filter-btn.active {
         box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
     }
+    
+    /* Reel specific styles */
+    .portfolio-item[data-category="influencer"] video {
+        aspect-ratio: 9/16;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+    }
+    
+    /* Responsive adjustments for reels */
+    @media (max-width: 768px) {
+        .portfolio-item[data-category="influencer"] video {
+            max-height: 400px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .portfolio-item[data-category="influencer"] video {
+            max-height: 500px;
+        }
+    }
+    
+    @media (min-width: 1280px) {
+        .portfolio-item[data-category="influencer"] video {
+            max-height: 600px;
+        }
+    }
 `;
 document.head.appendChild(style);
 
@@ -393,19 +560,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 let answer = '';
                 
                 switch(questionType) {
-                    case 'pricing':
-                        answer = 'Our pricing is project-based and depends on your specific needs. We offer competitive rates starting from ₹15,000 for basic packages. Book a free consultation to get a customized quote!';
-                        break;
-                    case 'timeline':
-                        answer = 'We pride ourselves on speed! Most projects are completed in 2-3 weeks. Social media campaigns can start showing results within the first week.';
-                        break;
-                    case 'services':
-                        answer = 'We offer Branding & Identity, Social Media Management, Performance Marketing, and Content Creation. Each service is tailored to your business goals.';
-                        break;
-                    case 'process':
-                        answer = 'Our 4-step process: Discovery (1-2 days), Strategy (3-5 days), Execution (6-14 days), and Results (ongoing). We keep you updated throughout!';
-                        break;
-                }
+case 'timeline':
+answer = 'We pride ourselves on speed! Most projects are completed in 2-3 weeks. Social media campaigns can start showing results within the first week.';
+break;
+case 'services':
+answer = 'We offer Branding & Identity, Social Media Management, Performance Marketing, and Content Creation. Each service is tailored to your business goals.';
+break;
+case 'process':
+answer = 'Our 4-step process: Discovery (1-2 days), Strategy (3-5 days), Execution (6-14 days), and Results (ongoing). We keep you updated throughout!';
+break;
+}
                 
                 showSupportMessage(answer);
             });
