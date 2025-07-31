@@ -140,8 +140,8 @@ function initThemeToggle() {
     
     function updateThemeIcon(theme) {
         const iconClass = theme === 'dark' ? 'ri-moon-line' : 'ri-sun-line';
-        themeIcon.className = iconClass + ' text-xl text-gray-700 dark:text-gray-300';
-        mobileThemeIcon.className = iconClass + ' text-xl text-gray-700 dark:text-gray-300';
+        themeIcon.className = iconClass + ' text-xl text-black dark:text-gray-300';
+        mobileThemeIcon.className = iconClass + ' text-xl text-black dark:text-gray-300';
     }
     
     // Add event listeners

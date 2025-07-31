@@ -3,33 +3,36 @@
 
 ## 🚀 Project Overview
 
-A modern, responsive website for **The Social Artist**, a digital marketing agency specializing in lightning-fast results and comprehensive digital solutions. This project showcases deep expertise in frontend development, UI/UX design, and performance web applications.
+A modern, responsive website for **The Social Artist**, a digital marketing agency specializing in high-impact, data-driven digital marketing solutions. Founded by strategic minds from IIT Dhanbad and NIT Jaipur, we specialize in branding, social media management, creative campaigns, and Influencer marketing—designed to maximize ROI, elevate engagement, and drive long-term growth.
 
 ## ✨ Key Features
 
 ### 🎨 Major UI/UX Enhancements
 
-- **🌑 Dark Mode Implementation**: Complete dark theme with a toggle for every page and section
+- **🌑 Dark Mode Implementation**: Complete dark theme with animated toggle for every page and section
 - **🔥 Red Theme Styling**: Bold red (#dc2626) strokes and borders on all cards and sections
-- **🎨 Enhanced Hero Section**: Simplified, visually appealing red-themed hero illustration
+- **🎨 Enhanced Hero Section**: Simplified, visually appealing red-themed hero illustration with improved mobile alignment
 - **🧭 Improved Navigation**: High-visibility navigation with distinct active states in both light and dark mode
+- **📱 Animated Mobile Menu**: Smooth hamburger-to-cross icon animation with full-width mobile menu cards
 
 ### 📱 Interactive & Visual Elements
 
-- **Portfolio Filtering**: Dynamic, category-based portfolio with dark/light support
+- **Portfolio Filtering**: Dynamic, category-based portfolio with dark/light support and chip-style filter buttons
 - **Support Widget**: Interactive help desk with FAQ and live chat
 - **Smooth Scrolling**: Enhanced navigation effects
 - **Hover Effects**: Engaging transitions and animated buttons (gradient motion)
-- **Responsive Design**: Touch-friendly, mobile-optimized layouts
+- **Responsive Design**: Touch-friendly, mobile-optimized layouts with improved button alignment
+- **Infinite Scrolling**: Mobile testimonial sections with smooth vertical scrolling animations
 
 ### 🔧 Technical Features
 
-- **Theme Toggle Functionality**: Sun/moon toggle with localStorage persistence for user preference
+- **Animated Theme Toggle**: Smooth sun/moon toggle with localStorage persistence and proper icon colors
 - **CSS Variables**: Full theme management using CSS custom properties
 - **Section-wise Comments**: Well-documented code for maintenance and onboarding
 - **Performance Optimized**: Fast loads via optimized assets, minified CSS/JS, and lazy-loaded images
 - **SEO**: Semantic HTML, meta tags, Open Graph, canonical URLs, and structured data (JSON-LD)
 - **Accessibility**: WCAG-compliant markup, proper ARIA labels, improved contrast, and readability
+- **Favicon Support**: Proper favicon implementation for browser compatibility
 
 ## 🛠️ Technologies Used
 
@@ -55,14 +58,15 @@ A modern, responsive website for **The Social Artist**, a digital marketing agen
 
 ```
 social-artist/
-├── index.html                  # Homepage
-├── portfolio.html              # Portfolio (with dark mode)
+├── index.html                  # Homepage with improved mobile alignment
+├── portfolio.html              # Portfolio with enhanced theme toggle
 ├── index.css                   # Main CSS (variables, theming, animations)
 ├── script.js                   # Global JS & theme toggle
-├── portfolio.js                # Portfolio-specific JS
+├── portfolio.js                # Portfolio-specific JS with mobile menu animations
 ├── userinput.py                # Interactive development notes/tooling
 ├── README.md                   # Documentation
 └── public/
+    ├── favicon.ico             # Browser favicon
     └── images/clients/         # Brand & startup logos
 ```
 
@@ -70,21 +74,22 @@ social-artist/
 
 ### Homepage
 
-- **Hero Section**: Animated red illustration, dark/light support
+- **Hero Section**: Animated red illustration, dark/light support, mobile-centered content
 - **About**: Company overview with animated stats
 - **Services**: Red-borders, interactive service cards
 - **Speed Advantage**: Fast delivery promise
 - **Methodology**: Four-step visualization
 - **Portfolio Preview**: Latest work showcase
 - **Industries**: Served industries, modern cards
-- **Testimonials**: Stylish, accessible reviews
+- **Testimonials**: Stylish, accessible reviews with infinite scrolling on mobile
 - **Contact Form**: With EmailJS and dark mode support
 
 ### Portfolio Page
 
-- **Dark Mode**: Full theme switching
-- **Category Filter**: Branding, Social Media, Content, Performance
+- **Dark Mode**: Full theme switching with proper icon colors
+- **Category Filter**: Branding, Social Media, Content, Influencer Marketing, Website Development
 - **Case Studies**: Detailed, animated, and interactive cards
+- **Mobile Menu**: Animated hamburger-to-cross icon with full-width layout
 
 ### Support Widget
 
@@ -103,7 +108,8 @@ social-artist/
 ## 📱 Responsive & Accessible Design
 
 - **Mobile-First**: Custom breakpoints, touch targets, swipe gestures
-- **Hamburger Menu**: Animated, theme-aware menu for mobile/tablet
+- **Animated Mobile Menu**: Smooth hamburger-to-cross icon transition
+- **Full-Width Mobile Cards**: Enhanced mobile menu with bottom-positioned CTA buttons
 - **Cross-Device**: Seamless tablet and desktop experience
 - **Accessibility**: Proper heading hierarchy, ARIA, alt text, contrast
 
@@ -122,6 +128,25 @@ social-artist/
 - **Responsive**: Verified on multiple devices and breakpoints
 - **Performance**: Meets Core Web Vitals targets
 - **Accessibility**: WCAG compliant; tested with screen readers and color contrast tools
+
+## 🚀 Recent Updates & Improvements
+
+### Mobile Experience Enhancements
+- **Animated Mobile Menu**: Smooth hamburger-to-cross icon transition
+- **Improved Mobile Alignment**: Hero section content properly centered on mobile
+- **Full-Width Mobile Cards**: Enhanced mobile menu layout with bottom-positioned CTA buttons
+- **Infinite Scrolling**: Mobile testimonial sections with smooth vertical animations
+
+### Theme & UI Improvements
+- **Enhanced Theme Toggle**: Proper icon colors (gray on white background in light mode)
+- **Consistent Design**: Unified mobile menu design across all pages
+- **Better Button Layout**: Full-width, centered Book Free Call buttons with enhanced styling
+- **Favicon Fix**: Proper favicon implementation for browser compatibility
+
+### Content Updates
+- **Updated Hero Description**: More comprehensive company description highlighting IIT/NIT background
+- **Service Descriptions**: Enhanced content for better brand positioning
+- **Improved Headings**: More engaging and descriptive section titles
 
 ## 🚀 Deployment & Demo
 
@@ -142,6 +167,7 @@ social-artist/
 - **UI/UX**: Responsive design, dark/light themes, modern accessibility
 - **Performance**: Fast loading, optimized for SEO and Web Vitals
 - **Docs**: Well-commented, maintainable codebase
+- **Animation**: Smooth transitions and interactive elements
 
 ## 📈 Project Impact
 
@@ -149,6 +175,7 @@ social-artist/
 - **Lead Generation**: Optimized CTAs and forms
 - **Portfolio**: Rich, filterable showcase (dark mode supported)
 - **Client Communication**: Integrated chat and support
+- **Mobile Experience**: Enhanced mobile usability with animated interactions
 
 ## 🧠 Technical & UX Achievements
 
@@ -157,6 +184,7 @@ social-artist/
 - **Enhanced Cards**: Red strokes on services, industries, testimonials (light/dark)
 - **Accessibility**: High contrast, readable, and screen-reader-friendly
 - **Performance**: CSS/JS optimized for loading and interaction
+- **Mobile Animations**: Smooth hamburger menu transitions and infinite scrolling
 
 ## 🔮 Future Enhancements
 
@@ -164,18 +192,19 @@ social-artist/
 - **Analytics**: Real-time tracking and reporting
 - **Progressive Web App**: PWA for mobile users
 - **CI/CD**: Automated deployments
+- **Advanced Animations**: More sophisticated micro-interactions
 
 ## 📞 Contact & Support
 
 For questions, support, or business inquiries:
 
 - **Email**: [hello@thesocialartist.in](mailto:hello@thesocialartist.in)
-- **Phone**: +91 8506044943
+- **Phone**: +91 8447378826
 - **Website**: [https://thesocialartist.in](https://thesocialartist.in)
 - **Portfolio**: [https://thesocialartist.in/portfolio](https://thesocialartist.in/portfolio)
 
 **Built with ❤️ by Lahori Venkatesh**
 
-*This project demonstrates best practices in modern web development: performance, accessibility, and user experience—delivering a professional digital presence for The Social Artist agency.*
+*This project demonstrates best practices in modern web development: performance, accessibility, and user experience—delivering a professional digital presence for The Social Artist agency with enhanced mobile interactions and smooth animations.*
 
 ---

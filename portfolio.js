@@ -385,13 +385,13 @@ function initializeFilters() {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
             filterButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-white', 'text-primary');
-                btn.classList.add('bg-white/20', 'text-white');
+                btn.classList.remove('active', 'bg-white', 'text-primary', 'shadow-lg', 'hover:shadow-xl', 'transform', 'hover:-translate-y-1');
+                btn.classList.add('bg-white/20', 'text-white', 'backdrop-blur-sm');
             });
             
             // Add active class to clicked button
-            button.classList.add('active', 'bg-white', 'text-primary');
-            button.classList.remove('bg-white/20', 'text-white');
+            button.classList.add('active', 'bg-white', 'text-primary', 'shadow-lg', 'hover:shadow-xl', 'transform', 'hover:-translate-y-1');
+            button.classList.remove('bg-white/20', 'text-white', 'backdrop-blur-sm');
             
             // Filter portfolio items
             const filter = button.getAttribute('data-filter');
@@ -422,13 +422,22 @@ function animateOnScroll() {
 function initializeMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
     const logo = document.querySelector('.flex-shrink-0 img');
     
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+        
         if(!mobileMenu.classList.contains('hidden')) {
+            // Menu is open - show close icon
+            menuIcon.classList.add('opacity-0', 'rotate-90');
+            closeIcon.classList.remove('opacity-0', 'rotate-90');
             logo.classList.add('h-12');
         } else {
+            // Menu is closed - show menu icon
+            menuIcon.classList.remove('opacity-0', 'rotate-90');
+            closeIcon.classList.add('opacity-0', 'rotate-90');
             logo.classList.remove('h-12');
         }
     });
@@ -491,6 +500,7 @@ style.textContent = `
     
     .filter-btn {
         transition: all 0.3s ease;
+        border: none;
     }
     
     .filter-btn:hover {
@@ -498,7 +508,23 @@ style.textContent = `
     }
     
     .filter-btn.active {
-        box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
+        box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+    }
+    
+    /* Desktop chip-style filter buttons */
+    @media (min-width: 640px) {
+        .filter-btn {
+            backdrop-filter: blur(10px);
+            border: none;
+        }
+        
+        .filter-btn:hover {
+            backdrop-filter: blur(15px);
+        }
+        
+        .filter-btn.active {
+            backdrop-filter: blur(20px);
+        }
     }
     
     /* Reel specific styles */
