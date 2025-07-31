@@ -228,12 +228,12 @@ nav a:hover {
 /* Book Free Call button styling */
 .gradient-motion,
 a[href*="calendly"] {
-    color: white !important;
+    color: rgb(153, 6, 6) !important;
 }
 
 .gradient-motion:hover,
 a[href*="calendly"]:hover {
-    color: white !important;
+    color: rgb(153, 6, 6) !important;
 }
 
 /* Override any text color classes for the Book Free Call button */
@@ -244,11 +244,19 @@ a[href*="calendly"] .text-white {
 
 /* Ensure button text stays white in all states */
 a[href*="calendly"] {
+<<<<<<< HEAD
     color: rgb(231, 3, 3) !important;
 }
 
 a[href*="calendly"] * {
     color: rgb(153, 6, 6) !important;
+=======
+    color: rgb(153, 6, 6) !important;
+}
+
+a[href*="calendly"] * {
+    color: rgb(153, 6, 6)!important;
+>>>>>>> 97410b883429e35dc43ffcbfd721d763099b5a4e
 }
 
 /* Navbar active state styling */
