@@ -97,6 +97,20 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* CTA Button Fixes */
+.hero-gradient a[href*="calendly"],
+.hero-gradient a[href*="index.html"] {
+    position: relative;
+    z-index: 30;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.hero-gradient a[href*="calendly"]:hover,
+.hero-gradient a[href*="index.html"]:hover {
+    z-index: 31;
+}
+
 /* Dark theme body styles */
 body {
     background-color: var(--bg-primary);

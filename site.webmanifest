@@ -1,0 +1,21 @@
+{
+  "name": "The Social Artist - Digital Marketing Agency",
+  "short_name": "Social Artist",
+  "description": "Delivering lightning-fast digital marketing results. Get results in weeks, not months.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#dc2626",
+  "icons": [
+    {
+      "src": "public/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "public/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+} 

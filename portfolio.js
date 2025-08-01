@@ -557,8 +557,18 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Support Widget Functionality
+// CTA Button Fix - Ensure links are clickable
 document.addEventListener('DOMContentLoaded', function() {
+    // Fix CTA buttons
+    const ctaButtons = document.querySelectorAll('.hero-gradient a[href*="calendly"], .hero-gradient a[href*="index.html"]');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Ensure the click event works
+            console.log('CTA button clicked:', this.href);
+        });
+    });
+
+    // Support Widget Functionality
     const supportBtn = document.getElementById('supportBtn');
     const supportPanel = document.getElementById('supportPanel');
     const closeSupport = document.getElementById('closeSupport');
