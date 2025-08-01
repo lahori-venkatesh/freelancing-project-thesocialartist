@@ -1,5 +1,5 @@
 
-# The Social Artist - Digital Marketing Agency Website
+# The Social Artist - Marketing Agency Website
 
 ## 🚀 Project Overview
 
